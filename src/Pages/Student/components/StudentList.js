@@ -5,7 +5,7 @@ import Student from './Student'
 export default function StudentList({ students }) {
     return (
         students.map(student => {
-            return <Student student={student} />;
+            return <Student key={student.id} student={student}/>;
         })
     );
 }

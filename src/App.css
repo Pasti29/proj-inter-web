@@ -59,3 +59,14 @@ nav {
     text-align: left;
     display: grid;
 }
+button {
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    height: 50px;
+}
+
+#studentDescriptionRef {
+    height: 100px;
+    resize: none;
+}
