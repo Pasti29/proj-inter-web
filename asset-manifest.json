@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/proj-inter-web/static/css/main.646d9aa2.css",
+    "main.js": "/proj-inter-web/static/js/main.2179ffdd.js",
+    "index.html": "/proj-inter-web/index.html",
+    "main.646d9aa2.css.map": "/proj-inter-web/static/css/main.646d9aa2.css.map",
+    "main.2179ffdd.js.map": "/proj-inter-web/static/js/main.2179ffdd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.646d9aa2.css",
+    "static/js/main.2179ffdd.js"
+  ]
+}
