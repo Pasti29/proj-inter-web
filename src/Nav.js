@@ -6,10 +6,10 @@ function Nav() {
   return (
       <nav>
           <ul className='nav-links'>
-            <NavLink className='navStyle' to='/student'>
+            <NavLink className='navStyle' to='/proj-inter-web/student'>
               <li>Student</li>
             </NavLink>
-            <NavLink className='navStyle' to='/group'>
+            <NavLink className='navStyle' to='/proj-inter-web/group'>
               <li>Grupa</li>
             </NavLink>
           </ul>

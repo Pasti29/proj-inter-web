@@ -11,9 +11,10 @@ function App() {
       <div className="App">
         <Nav />
         <Routes>
-          <Route path='/proj-inter-web/' exact element={ <StudentPage /> } />
-          <Route path='/proj-inter-web//student/*' exact element={ <StudentPage /> } />
-          <Route path='/proj-inter-web//group/*' exact element={ <GroupPage /> } />
+          <Route path='/' exact element={ <StudentPage /> } />
+          <Route path='/proj-inter-web' exact element={ <StudentPage /> } />
+          <Route path='/proj-inter-web/student/*' exact element={ <StudentPage /> } />
+          <Route path='/proj-inter-web/group/*' exact element={ <GroupPage /> } />
         </Routes>
       </div>
     </Router>
