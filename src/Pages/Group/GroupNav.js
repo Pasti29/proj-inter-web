@@ -6,10 +6,10 @@ function GroupNav() {
     return (
         <nav className="subNav">
             <ul className="nav-links">
-                <NavLink className='navStyle subNavStyle' to='/group'>
+                <NavLink className='navStyle subNavStyle' to='/proj-inter-web/group'>
                     <li>Wyświetl grupy</li>
                 </NavLink>
-                <NavLink className='navStyle subNavStyle' to='/group/add'>
+                <NavLink className='navStyle subNavStyle' to='/proj-inter-web/group/add'>
                     <li>Dodaj grupę</li>
                 </NavLink>
             </ul>

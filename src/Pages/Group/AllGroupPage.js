@@ -1,12 +1,21 @@
 import React from "react";
 import '../../App.css'
+import GroupList from "./Components/GroupList";
 
-function AllGroupPage() {
-    return (
-        <div>
-            <h1>All Group Page</h1>
-        </div>
-    );
+class AllGroupPage extends React.Component {
+
+    constructor (props) {
+        super(props);
+        this.groups = props.groups;
+    }
+
+    render () {
+        return (
+            <div className='AllGroupPage'>
+                <GroupList groups={this.groups} />
+            </div>
+        );
+    }
 }
 
 export default AllGroupPage;
