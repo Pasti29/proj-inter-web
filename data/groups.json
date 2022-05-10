@@ -1,0 +1,18 @@
+[
+    {
+    "id": "1",
+    "name": "Grupa 1",
+    "members": ["Adam Marciniak", "Emil Górecki"],
+    "tags": ["backend", "c++", "algorytmy"],
+    "description": "Szukamy jednej osoby do projektu Systemów Operacyjnych 2.",
+    "subject": "SO2"
+    },
+    {
+    "id": "2",
+    "name": "Grupa 2",
+    "members": ["Paulina Ostrowska", "Oksana Gajewska"],
+    "tags": ["python", "django", "React"],
+    "description": "Szukamy dwóch osób do Projektu Zespołowego. Najlepiej, żeby umiała JavaScript oraz React'a.",
+    "subject": "Projekt Zespołowy"
+    }
+]
