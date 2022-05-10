@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import '../../App.css'
 import GroupList from "./Components/GroupList";
+import axios from 'axios';
 
-class AllGroupPage extends React.Component {
+const AllGroupPage = () => {
 
-    constructor (props) {
-        super(props);
-        this.groups = props.groups;
-    }
+    const [groups, setGroups] = useState([]);
 
-    render () {
-        return (
-            <div className='AllGroupPage'>
-                <GroupList groups={this.groups} />
-            </div>
-        );
-    }
+    useEffect(() => {
+      axios.get('data/groups.json')
+          .then(res => {
+            setGroups(res.data);
+          })
+          .catch(err => {
+              console.log(err)
+          })
+    }, []);
+
+    return (
+        <div className='AllGroupPage'>
+            <GroupList data={groups} />
+        </div>
+    );
 }
 
 export default AllGroupPage;
