@@ -14,11 +14,13 @@ function App() {
   useEffect(() => {
     axios.get('data/students.json')
       .then(res => {
-
-        const newRes = res.data.students.map(student => {
-          return {...student, photo: 'https://picsum.photos/70/100'}
-        })
-        setStudents(newRes);
+        for (let i = 0; i < res.data.students.length; i++) {
+          axios.get('https://picsum.photos/70/100')
+            .then(photoRes => {
+              res.data.students[i].photo = photoRes.request.responseURL;
+            });
+        }
+        setStudents(res.data.students);
       });
 
     axios.get('data/groups.json')

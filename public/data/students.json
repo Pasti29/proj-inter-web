@@ -12,7 +12,8 @@
         "UCiSW2",
         "PIW"
       ],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed arcu urna, ultricies at tortor et, egestas vehicula justo. Mauris ut maximus ex, nec luctus nibh. Vivamus condimentum odio et sem euismod interdum et et lorem. Phasellus porttitor molestie tortor, ac sodales nisl tristique nec. In hac habitasse platea dictumst. Pellentesque eu facilisis ante. Duis blandit mi in risus cursus sagittis. Vestibulum lacinia sagittis orci malesuada volutpat."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed arcu urna, ultricies at tortor et, egestas vehicula justo. Mauris ut maximus ex, nec luctus nibh. Vivamus condimentum odio et sem euismod interdum et et lorem. Phasellus porttitor molestie tortor, ac sodales nisl tristique nec. In hac habitasse platea dictumst. Pellentesque eu facilisis ante. Duis blandit mi in risus cursus sagittis. Vestibulum lacinia sagittis orci malesuada volutpat.",
+      "photo": ""
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
       "subjects": [
         "Projekt Zespołowy"
       ],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed arcu urna, ultricies at tortor et, egestas vehicula justo. Mauris ut maximus ex, nec luctus nibh. Vivamus condimentum odio et sem euismod interdum et et lorem. Phasellus porttitor molestie tortor, ac sodales nisl tristique nec. In hac habitasse platea dictumst. Pellentesque eu facilisis ante. Duis blandit mi in risus cursus sagittis. Vestibulum lacinia sagittis orci malesuada volutpat."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed arcu urna, ultricies at tortor et, egestas vehicula justo. Mauris ut maximus ex, nec luctus nibh. Vivamus condimentum odio et sem euismod interdum et et lorem. Phasellus porttitor molestie tortor, ac sodales nisl tristique nec. In hac habitasse platea dictumst. Pellentesque eu facilisis ante. Duis blandit mi in risus cursus sagittis. Vestibulum lacinia sagittis orci malesuada volutpat.",
+      "photo": ""
     },
     {
       "id": "3",
@@ -39,7 +41,8 @@
       "subjects": [
         "RiPO"
       ],
-      "description": "Lorem dolor sit amet, consectetur adipiscing elit. Sed arcu urna, ultricies at tortor et, egestas vehicula justo. Mauris ut maximus ex, nec luctus nibh. Vivamus condimentum odio et sem euismod interdum et et lorem. Phasellus porttitor molestie tortor, ac sodales nisl tristique nec. In hac habitasse platea dictumst. Pellentesque eu facilisis ante. Duis blandit mi in risus cursus sagittis. Vestibulum lacinia sagittis orci malesuada volutpat."
+      "description": "Lorem dolor sit amet, consectetur adipiscing elit. Sed arcu urna, ultricies at tortor et, egestas vehicula justo. Mauris ut maximus ex, nec luctus nibh. Vivamus condimentum odio et sem euismod interdum et et lorem. Phasellus porttitor molestie tortor, ac sodales nisl tristique nec. In hac habitasse platea dictumst. Pellentesque eu facilisis ante. Duis blandit mi in risus cursus sagittis. Vestibulum lacinia sagittis orci malesuada volutpat.",
+      "photo": ""
     }
   ]
 }
