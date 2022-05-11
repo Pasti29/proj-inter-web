@@ -13,8 +13,14 @@ function App() {
 
   useEffect(() => {
     axios.get('data/students.json')
-      .then(res => setStudents(res.data));
-    ;
+      .then(res => {
+
+        const newRes = res.data.students.map(student => {
+          return {...student, photo: 'https://picsum.photos/70/100'}
+        })
+        setStudents(newRes);
+      });
+
     axios.get('data/groups.json')
          .then(res => {
                 setGroups(res.data);
@@ -22,9 +28,11 @@ function App() {
          .catch(err => {
                 console.log(err)
               })
+
   }, []);
 
   return (
+    
     <Router>
       <div className="App">
         <Nav />

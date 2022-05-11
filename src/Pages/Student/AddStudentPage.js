@@ -23,7 +23,8 @@ function AddStudentPage({ setStudents }) {
                 email: email,
                 tags: tags,
                 subjects: subjects,
-                description: description
+                description: description,
+                photo: 'https://picsum.photos/70/100'
             }];
         });
 
