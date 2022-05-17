@@ -53,6 +53,18 @@ nav {
     padding: 2%;
 }
 
+.authDiv {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-style: solid;
+    width: 20%;
+    text-align: left;
+    padding: 2%;
+    text-align: center;
+    font-size: 2vh;
+}
+
 .studentName, .studentTags, .studentSubjects {
     display: inline;
 }
