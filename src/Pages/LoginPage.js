@@ -21,8 +21,6 @@ export default function LoginPage() {
             }
         })
 
-        console.log(foundUser)
-
         if (foundUser.password === password) {
             setUser(foundUser);
         }
