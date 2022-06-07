@@ -1,9 +1,11 @@
 import { auth, firestore } from "./init";
 import {
     GoogleAuthProvider,
+    signInWithEmailAndPassword,
     createUserWithEmailAndPassword,
     signInWithPopup,
     signOut,
+    getAuth,
 } from "firebase/auth";
 
 import {
@@ -35,6 +37,15 @@ export const logInWithGoogle = async () => {
         alert(err.message);
     }
 };
+
+// signInWithEmailAndPassword(auth, email, password)
+//     .then((userCredentials) => {
+//         const user = userCredentials.user;
+//     })
+//     .catch((error) => {
+//         const errorCode = error.code;
+//         const errorMessage = error.message;
+//     });
 
 
 export const logout = () => {

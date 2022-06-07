@@ -12,14 +12,14 @@ import LoginPage from './Pages/LoginPage';
 
 import { auth } from './firebase/init';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { logout } from './firebase/auth';
+
 
 function App() {
 
   const [students, setStudents] = useState([]);
   const [groups, setGroups] = useState([]);
 
-  const [userGoogle] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   const [users, setUsers] = useState([
     {
@@ -35,9 +35,9 @@ function App() {
       password: "password"
     }
   ]);
-  const [user, setUser] = useState("");
+  // const [user, setUser] = useState("");
 
-  const providerUser = useMemo(() =>({ user, setUser }), [user, setUser]);
+  // const providerUser = useMemo(() =>({ user, setUser }), [user, setUser]);
 
   useEffect(() => {
     axios.get('data/students.json')
@@ -65,11 +65,11 @@ function App() {
     
     <Router>
       <div className="App">
-        <UserContext.Provider value={providerUser}>
+        <UserContext.Provider value={user}>
           <Nav />
         </UserContext.Provider>
         <UsersContext.Provider value={{ users, setUsers }}>
-          <UserContext.Provider value={providerUser}>
+          <UserContext.Provider value={user}>
             <Routes>
               <Route path='/*' exact element={ <StudentPage students={students} setStudents={setStudents} /> } />
               <Route path='/proj-inter-web' exact element={ <StudentPage students={students} setStudents={setStudents} /> } />

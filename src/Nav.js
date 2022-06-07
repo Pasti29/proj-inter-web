@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import './App.css'
 import { NavLink } from 'react-router-dom';
-import { UserContext } from './UserContext';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from './firebase/init';
+import { logout } from './firebase/auth';
 
 const style = {
   color: "white",
@@ -9,14 +11,10 @@ const style = {
 }
 
 function Nav() {
-  const {user, setUser} = useContext(UserContext);
-
-  function logout() {
-    setUser("");
-  }
+  const [user] = useAuthState(auth);
 
   const rend = () => {
-    if (user === "") {
+    if (user === null) {
       return (
         <div>
           <NavLink to='/proj-inter-web/login' style={style}>
@@ -30,7 +28,7 @@ function Nav() {
     } else {
       return (
         <div>
-          Witaj, {user.username} <br />
+          Witaj, {user.displayName} <br />
           <a href='#' onClick={logout} style={style} >Wyloguj</a>
         </div>
       )
@@ -49,6 +47,7 @@ function Nav() {
             </NavLink>
           </ul>
           {rend()}
+          {console.log(user)}
           
       </nav>
       
