@@ -1,6 +1,7 @@
 import { auth, firestore } from "./init";
 import {
     GoogleAuthProvider,
+    createUserWithEmailAndPassword,
     signInWithPopup,
     signOut,
 } from "firebase/auth";

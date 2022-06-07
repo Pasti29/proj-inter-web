@@ -50,7 +50,7 @@ function LoginPage() {
         </button>
         <br/>
         <div>
-            Don't have an account? <Link to="/register">Register</Link> now.
+            Don't have an account? <Link to="/proj-inter-web/register">Register</Link> now.
         </div>
 
     </div>

@@ -65,9 +65,6 @@ function App() {
     
     <Router>
       <div className="App">
-        { userGoogle
-        && <button onClick={logout}>Wyloguj {userGoogle.displayName}</button>
-        || <NavLink to="/proj-inter-web/login" >Zaloguj</NavLink> }
         <UserContext.Provider value={providerUser}>
           <Nav />
         </UserContext.Provider>
