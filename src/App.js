@@ -6,14 +6,20 @@ import GroupPage from './Pages/Group/GroupPage';
 import { UserContext } from './UserContext';
 import { UsersContext } from './UsersContext';
 import RegisterPage from './Pages/RegisterPage';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, NavLink, Route, Routes } from 'react-router-dom'
 import axios from 'axios';
 import LoginPage from './Pages/LoginPage';
+
+import { auth } from './firebase/init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { logout } from './firebase/auth';
 
 function App() {
 
   const [students, setStudents] = useState([]);
   const [groups, setGroups] = useState([]);
+
+  const [userGoogle] = useAuthState(auth);
 
   const [users, setUsers] = useState([
     {
@@ -59,6 +65,9 @@ function App() {
     
     <Router>
       <div className="App">
+        { userGoogle
+        && <button onClick={logout}>Wyloguj {userGoogle.displayName}</button>
+        || <NavLink to="/proj-inter-web/login" >Zaloguj</NavLink> }
         <UserContext.Provider value={providerUser}>
           <Nav />
         </UserContext.Provider>

@@ -1,42 +1,59 @@
-import React, { useContext, useRef } from 'react'
-import { UserContext } from '../UserContext';
-import { UsersContext } from '../UsersContext'
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../firebase/init";
+import { logInWithGoogle } from "../firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 
-export default function LoginPage() {
-    const { user, setUser } = useContext(UserContext);
-    const { users, setUsers } = useContext(UsersContext);
 
-    const usernameRef = useRef();
-    const passwordRef = useRef();
+function LoginPage() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-    function login() {
-        const username = usernameRef.current.value;
-        const password = passwordRef.current.value;
+    const [user, loading, error] = useAuthState(auth);
 
-        let foundUser = null;
-        users.map(u => {
-            if (u.username === username) {
-                foundUser = u;
-                return;
-            }
-        })
+    const navigate = useNavigate();
 
-        if (foundUser.password === password) {
-            setUser(foundUser);
-        }
+    useEffect(() => {
+        if (loading)
+            return
+        if (user)
+            navigate("/");
+        if(error)
+            console.error({error});
+        }, [user, loading]);
 
-        usernameRef.current.value = null;
-        passwordRef.current.value = null;
-        
-    }
+    return (
+    <div className="login">
 
-  return (
-    <div className='authDiv'>
-        Nazwa użytkownika: <br />
-        <input type="text" ref={usernameRef} required/> <br />
-        Hasło: <br />
-        <input type="password" ref={passwordRef} required/> <br />
-        <button type="submit" onClick={login}>Zaloguj się</button>
+        <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="E-mail Address"
+        />
+        <br/>
+        <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+        />
+        <br/>
+        {/* <button
+            onClick={() => logInWithEmailAndPassword(email, password)}
+        >
+            Login
+        </button> */}
+        <br/>
+        <button onClick={logInWithGoogle}>
+            Login with Google
+        </button>
+        <br/>
+        <div>
+            Don't have an account? <Link to="/register">Register</Link> now.
+        </div>
+
     </div>
-  )
+    );
 }
+export default LoginPage;
