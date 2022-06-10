@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../firebase/init";
 import { logInWithGoogle } from "../firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 
@@ -39,11 +40,18 @@ function LoginPage() {
             placeholder="Password"
         />
         <br/>
-        {/* <button
-            onClick={() => logInWithEmailAndPassword(email, password)}
+        <button
+            onClick={() => signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user =userCredential.user;
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                })}
         >
             Login
-        </button> */}
+        </button>
         <br/>
         <button onClick={logInWithGoogle}>
             Login with Google
